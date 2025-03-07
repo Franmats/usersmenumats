@@ -1,0 +1,93 @@
+/* CONTENEDOR DE TODAS LAS OPTIONS */
+.container-category {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #582655;
+    width: auto;
+    height: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: normal;
+    align-content: space-around;
+    justify-content: space-evenly;
+    
+}
+/* CONTENEDOR DE ITEM OF OPTIONS */
+.flex-category{
+    display: flex;
+    text-align: center;
+    border: solid rgb(0, 0, 0);
+    border-width: 5px;
+    border-radius: 10px;
+    background-color: #a3ccff;
+    width: 150px;
+    height: 200px;
+}
+/* IMAGEN */
+.flex-category div a div img {
+    
+    width: 100%;
+    height: 100%;
+}
+/* URL OFF  */
+.flex-category div a{
+    text-decoration: none;
+
+    color:  rgb(0, 0, 0);
+}
+/* TEXTO DE LA IMAGEN */
+.flex-category div a .title{
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    font-size: 18px ;
+}
+
+/* @media (min-width: 768px) {
+    .container-category {
+        width: 1920px;
+        height: 1080px;
+    }
+    .flex-category{
+        flex-wrap:wrap ;
+    }
+} */
+@media (min-width: 768px) {
+    .container-category {
+        justify-content: space-around; /* Distribuye el espacio alrededor */
+        min-height: 600px; /* Aumenta la altura mínima */
+    }
+
+    .flex-category {
+        width: 200px; /* Aumenta el ancho de los elementos */
+        height: 250px; /* Aumenta la altura de los elementos */
+    }
+
+    .flex-category div a div img {
+        height: 200px; /* Aumenta la altura de la imagen */
+    }
+
+    .flex-category div a .title {
+        font-size: 20px; /* Aumenta el tamaño de la fuente */
+    }
+}
+
+/* Media Query para pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .container-category {
+        justify-content: space-evenly; /* Distribuye el espacio uniformemente */
+        min-height: 800px; /* Aumenta la altura mínima */
+    }
+    .flex-category {
+        width: 250px; /* Aumenta el ancho de los elementos */
+        height: 300px; /* Aumenta la altura de los elementos */
+    }
+        .flex-category div a div img {
+        height: 250px; /* Aumenta la altura de la imagen */
+    }
+    .flex-category div a .title {
+        font-size: 22px; /* Aumenta el tamaño de la fuente */
+    }
+}
+
