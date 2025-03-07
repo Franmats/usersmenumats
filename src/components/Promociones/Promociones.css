@@ -1,6 +1,4 @@
-
-
-.not-found-page-container {
+.promociones-container {
   display: flex;
   flex-direction: column;
   padding: 20px 5px;
@@ -10,42 +8,42 @@
   align-items: center;
 }
 
-.not-found-page-detail {
+.promociones-detail-view {
   display: flex;
   align-items: center;
   background-color: #222121;
   border: 10px solid #2d1a54;
   width: 90%;
-  max-width: 600px;
+  max-width: 900px;
   height: auto;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 15px;
 }
 
-.not-found-page-content {
+.promociones-detail {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  width: calc(100% - 20px);
+  width: 100%;
   height: auto;
   padding: 10px;
 }
 
-.not-found-page-title {
+.promociones-title {
   color: white;
   font-size: 18px;
   font-weight: 500;
 }
 
-.not-found-page-description {
+.promociones-description {
   color: white;
   font-size: 14px;
   line-height: 1.4;
 }
 
-.not-found-page-status {
+.promociones-price {
   color: white;
   font-size: 24px;
   font-weight: 600;
@@ -53,27 +51,8 @@
 
 /* Responsive Design */
 
-@media (min-width: 361px) { 
-  .not-found-page-detail {
-    width: 80%; 
-    max-width: 800px; 
-    border: 15px solid #2d1a54;
-  }
-
-  .not-found-page-content {
-    width: calc(100% - 30px); 
-    padding: 15px; 
-  }
-
-  .not-found-page-title {
-    font-size: 22px;
-  }
-
-  .not-found-page-description {
-    font-size: 16px; 
-  }
-
-  .not-found-page-status {
-    font-size: 28px; 
+@media (max-width: 480px) {
+  .promociones-detail-view {
+    width: 95%; /* Ajuste para pantallas más pequeñas */
   }
 }

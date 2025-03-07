@@ -22,7 +22,7 @@ export const Header = ()=> {
                       </div>
                 </div>
                 <button className="c2" aria-label="Ver promociones disponibles">
-                  <a href="/menu/demo/3">VER PROMOCIONES</a>
+                  <a href="/menu/demo-promociones">VER PROMOCIONES</a>
 
                 </button>
                 

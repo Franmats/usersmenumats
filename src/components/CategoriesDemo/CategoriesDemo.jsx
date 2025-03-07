@@ -19,7 +19,6 @@ export const CategoriesDemo = ()=> {
             if (response.ok){
               
                 const data = await response.json()
-                console.log(data.payload)/* LOGGG */
                 setData(data.payload);
                 
             }else {

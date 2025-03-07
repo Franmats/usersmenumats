@@ -18,24 +18,27 @@
 .flex-category{
     display: flex;
     text-align: center;
-    border: solid rgb(0, 0, 0);
-    border-width: 5px;
+    border: solid #2D1A54;
+    border-width: 7px;
     border-radius: 10px;
-    background-color: #a3ccff;
+    background-color: #222121;
     width: 150px;
     height: 200px;
 }
 /* IMAGEN */
 .flex-category div a div img {
     
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
 /* URL OFF  */
 .flex-category div a{
     text-decoration: none;
 
-    color:  rgb(0, 0, 0);
+    color:  rgb(255, 255, 255);
+}
+.flex-category .category {
+   padding-top: 20px;
 }
 /* TEXTO DE LA IMAGEN */
 .flex-category div a .title{

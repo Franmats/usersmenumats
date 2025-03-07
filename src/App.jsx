@@ -4,6 +4,7 @@ import { Header } from "./components/Header/Header.jsx";
 import { CategoriesDemo } from './components/CategoriesDemo/CategoriesDemo.jsx';
 import { ProductsView } from './components/ProductsView/ProductsView.jsx';
 import {NotFound} from './components/NotFound/NotFound.jsx';
+import Promociones from './components/Promociones/Promociones.jsx';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     
     <Routes>
       <Route path="/menu/categories/demo" element={<CategoriesDemo/>}/>
+      <Route path="/menu/demo-promociones" element={<Promociones/>}/>
       <Route path="/menu/demo/:meal" element={<ProductsView/>}/>
       <Route path='*' element={<NotFound/>}/> 
     </Routes>

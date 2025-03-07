@@ -18,9 +18,8 @@ export const ProductsView = ()=> {
               withCredentials: true
             });
             if (response.ok){
-              console.log(response)
+    
                 const data = await response.json()
-                console.log(data.payload)
                 setData(data.payload);
             }else {
                 
