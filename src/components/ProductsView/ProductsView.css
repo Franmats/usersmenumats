@@ -4,7 +4,7 @@
     padding: 20px 5px;
     background-color: #582655;
     gap: 15px;
-    min-height: 100vh;
+    min-height: 120vh;
     align-items: center; /* Centrar los elementos en la columna */
   }
   
