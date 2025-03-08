@@ -9,7 +9,7 @@ export const CategoriesDemo = ()=> {
   
         const fetchData = async () => {
           try {
-            const response = await fetch( `https://matsapps.com:3000/api/categories/demo `, {
+            const response = await fetch( `https://matsapps.com/api/categories/demo `, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json'

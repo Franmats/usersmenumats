@@ -10,7 +10,7 @@ export const ProductsView = ()=> {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch(`https://matsapps.com:3000/api/products/demo/${meal} `, {
+            const response = await fetch(`https://matsapps.com/api/products/demo/${meal} `, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json'
