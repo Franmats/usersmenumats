@@ -1,0 +1,31 @@
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupar toda la pantalla */
+    background-color: #582655; /* Mismo color del fondo */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.loader-logo {
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite; /* Rotación animada */
+}
+
+.loader-text {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

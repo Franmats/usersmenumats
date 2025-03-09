@@ -1,5 +1,6 @@
 .menu-view {
     display: flex;
+    width: 460px;
     flex-direction: column; /* Cambiado a columna */
     padding: 20px 5px;
     background-color: #582655;
@@ -68,6 +69,9 @@
     .product-detail-view .img {
       width: 120px;
       height: 110px;
+    }
+    .menu-view {
+      width: auto;
     }
   
     .detail-view {
