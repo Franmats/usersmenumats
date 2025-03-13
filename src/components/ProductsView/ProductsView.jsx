@@ -45,7 +45,7 @@ export const ProductsView = () => {
                 <Loader /> // Muestra el loader mientras carga
             ) : (
                 <div className="menu-view">
-                    {data.map((item) => (
+                    {data.filter((item) => item.status === "activo").map((item) => (
                         <div key={item._id} className="product-detail-view">
                             <div className="img">
                                 <img src={item.imagen} alt={item.nombre} />
