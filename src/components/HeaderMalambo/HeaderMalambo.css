@@ -1,0 +1,45 @@
+header {
+   
+    background-color:#221C45;
+}
+
+.header-contain-malambo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header-contain-malambo .header-image-malambo{
+    height: auto;
+    
+}
+.header-contain-malambo .header-image-malambo img{
+    height: 200px;
+    width: 220px;
+  
+}
+
+.header-contain-malambo  .c1-malambo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+.header-contain-malambo .header-description-malambo .c1-malambo .social-links-malambo {
+    width: 100px;
+}
+
+
+@media  (min-width: 768px) {
+    .header-contain-malambo{
+        width: 500px;
+    }
+}
+
+

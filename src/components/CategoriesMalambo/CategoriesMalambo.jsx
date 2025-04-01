@@ -1,0 +1,63 @@
+import { HeaderMalambo } from "../HeaderMalambo/HeaderMalambo.jsx";
+import "./CategoriesMalambo.css";
+import React, { useState, useEffect } from "react";
+import { LoaderMalambo } from "../LoaderMalambo/LoaderMalambo.jsx";
+
+export const CategoriesMalambo = () => {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true); // Estado de carga
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setLoading(true); // Activa el loader al iniciar la petición
+            try {
+                const response = await fetch("https://matsapps.com/api/categories/malambo", {
+                    method: "GET",
+                    headers: { "Content-Type": "application/json" },
+                    withCredentials: true
+                });
+
+                if (response.ok) {
+                    const jsonData = await response.json();
+                    setData(jsonData.payload);
+                } else {
+                    console.log("Error al cargar datos");
+                }
+            } catch (error) {
+                console.error("Error al cargar datos:", error);
+            }
+
+            // Mantiene el loader visible 2 segundos más
+            setTimeout(() => {
+                setLoading(false);
+            }, 500); // 2000ms = 2 segundos
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div>
+            <HeaderMalambo />
+            {loading ? (
+                <LoaderMalambo /> // Muestra el loader mientras carga
+            ) : (
+                <div className="container-category-malambo">
+                    {data.map((item) => (
+                        <div key={item._id} className="flex-category-malambo">
+                            <div className="category-malambo">
+                                {/* Cambié la clase de "category" a "category-malambo" */}
+                                <a href={`/menu/${item.resto}/${item.nombre}`}>
+                                    <div className="img-category-malambo">
+                                        <img src={item.image} alt={item.nombre} />
+                                    </div>
+                                    <div className="title-malambo">{item.nombre}</div>
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+};
