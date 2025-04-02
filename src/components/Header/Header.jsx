@@ -4,7 +4,7 @@ export const Header = ()=> {
        
   return (
     <div>
-        <header>
+        <header className="header-view">
             <div className="header-contain">
               <div className="header-image">
                       <img src="https://firebasestorage.googleapis.com/v0/b/super-ecommerce-f7347.appspot.com/o/demo.png?alt=media&token=83c0e637-43cd-4386-8abc-62ff7f7f7ea5" alt="logo"  width="250px" height="250px"/>

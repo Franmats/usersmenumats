@@ -1,4 +1,4 @@
-.loader-container {
+.loader-container-malambo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,13 +12,13 @@
     z-index: 1000;
 }
 
-.loader-logo {
+.loader-logo-malambo {
     width: 100px;
     height: 100px;
     animation: spin 2s linear infinite; /* Rotación animada */
 }
 
-.loader-text {
+.loader-text-malambo {
     color: white;
     font-size: 18px;
     margin-top: 10px;
