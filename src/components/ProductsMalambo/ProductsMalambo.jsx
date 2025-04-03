@@ -6,12 +6,13 @@ import { LoaderMalambo } from "../LoaderMalambo/LoaderMalambo.jsx";
 
 export const ProductsMalambo = () => {
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true); // Estado de carga
+    const [loading, setLoading] = useState(true);
     const { meal } = useParams();
+    const [selectedImage, setSelectedImage] = useState(null); // Estado para la imagen en el modal
 
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true); // Activar el loader
+            setLoading(true);
             try {
                 const response = await fetch(`https://matsapps.com/api/products/malambo/${meal}`, {
                     method: "GET",
@@ -29,10 +30,9 @@ export const ProductsMalambo = () => {
                 console.error("Error al cargar datos:", error);
             }
 
-            // Agregar un retraso extra de 2 segundos antes de ocultar el loader
             setTimeout(() => {
                 setLoading(false);
-            }, 500); // 2000ms = 2 segundos
+            }, 500);
         };
 
         fetchData();
@@ -42,13 +42,18 @@ export const ProductsMalambo = () => {
         <div>
             <HeaderMalambo />
             {loading ? (
-                <LoaderMalambo /> // Muestra el loader mientras carga
+                <LoaderMalambo />
             ) : (
                 <div className="menu-malambo">
                     {data.filter((item) => item.status === "activo").map((item) => (
                         <div key={item._id} className="product-detail-malambo">
                             <div className="img">
-                                <img src={item.imagen} alt={item.nombre} />
+                                <img 
+                                    src={item.imagen} 
+                                    alt={item.nombre} 
+                                    onClick={() => setSelectedImage(item.imagen)} // Al hacer clic, abre la imagen
+                                    style={{ cursor: "pointer" }} 
+                                />
                             </div>
                             <div className="detail-malambo">
                                 <div className="product-title-malambo"><b>{item.nombre}</b></div>
@@ -57,6 +62,15 @@ export const ProductsMalambo = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+            )}
+
+        
+            {selectedImage && (
+                <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+                    <div className="modal-content">
+                        <img src={selectedImage} alt="Imagen ampliada" />
+                    </div>
                 </div>
             )}
         </div>
