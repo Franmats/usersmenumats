@@ -58,7 +58,6 @@ export const ProductsMalambo = () => {
                             <div className="detail-malambo">
                                 <div className="product-title-malambo"><b>{item.nombre}</b></div>
                                 <div className="product-descrip-malambo">{item.descripcion}</div>
-                                <div className="product-price-malambo"><b>${item.precio}</b></div>
                             </div>
                         </div>
                     ))}
