@@ -30,6 +30,18 @@ header {
     justify-content: center;
    
 }
+.header-contain-malambo  .c1-malambo button {
+   background-color: #221C45;
+   text-decoration: none;
+}
+.header-contain-malambo  .c1-malambo .c2-malambo {
+    border: 2px solid #FCC41A;
+    border-radius: 8px;
+}
+.header-contain-malambo  .c1-malambo button a {
+  color: white;
+   
+}
 
 .header-contain-malambo .header-description-malambo .c1-malambo .social-links-malambo {
     width: 100px;
